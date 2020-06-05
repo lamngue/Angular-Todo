@@ -1,0 +1,20 @@
+<mat-card class="todos" [class.done]="todo.done === true">
+
+  <h3>
+    <input (change) = "done(todo.id)" [checked]="todo.done" type="checkbox"/>
+    <a [title]="todo.name + ' details'" >
+      {{ todo.name }}
+    </a>
+    <button (click)="delete(todo.id)" class="del" mat-mini-fab color="warn" aria-label="Delete todo">
+      x
+    </button>
+    <button (click)="editTodo(todo.id)" class="edit" mat-mini-fab color="accent" aria-label="Edit todo">
+      Edit
+    </button>
+  </h3>
+  <p>{{todo.urgency}}</p>
+  <p *ngIf="todo.description">
+    Description: {{ todo.description }}
+  </p>
+</mat-card>
+<br>

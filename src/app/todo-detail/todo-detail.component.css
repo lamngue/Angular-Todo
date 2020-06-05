@@ -1,0 +1,9 @@
+.del, .edit{
+  float: right;
+}
+.addTodo{
+  float: left;
+}
+.done{
+  background-color: #ACEB98
+}
