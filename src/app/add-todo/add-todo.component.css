@@ -1,0 +1,25 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin-left: 10%;
+}
+
+.example-container{
+  position: absolute;
+  top:15%;
+  width: 100%;
+  margin: auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.sub{
+  margin-top: 10px;
+}
+.back{
+  margin-top: 10px;
+  left: 10%;
+}

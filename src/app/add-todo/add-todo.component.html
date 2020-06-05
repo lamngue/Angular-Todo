@@ -1,0 +1,31 @@
+<div class="example-container">
+  <form (ngSubmit)="onSubmit(addForm.value)" [formGroup]="addForm" class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input [value]="todo?.name ? todo.name : ''" matInput placeholder="Make lunch" formControlName="name">
+      <mat-error *ngIf="addForm.get('name').hasError('required')">
+        Name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Urgency</mat-label>
+      <input [value]="todo?.urgency ? todo.urgency : ''"  matInput placeholder="Right now..." formControlName="urgency">
+      <mat-error *ngIf="addForm.get('urgency').hasError('required')">
+        Urgency is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <input [value]="todo?.description ? todo.description : ''" matInput placeholder="Ex. Pizza" formControlName="description">
+      <mat-error *ngIf="addForm.get('description').hasError('required')">
+        Description is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" class="button sub" type="submit">{{todo ? "Edit!" : "Add!"}}</button>
+    &nbsp;&nbsp;&nbsp;
+  </form>
+  <button (click)="goBack()" mat-raised-button color="warn" class="button back">Back</button>
+</div>
